@@ -149,21 +149,21 @@ More Documentation and examples can be find in the code itself. Also, every non-
 
 ##TroubleShooting:
 
-* Tooltips displays with no styles, or even doesn't display at all: 
-...Do not forget to execute: 
-```javascript $( document ).tooltip(); ```
- As document load. Also, you need the jueryUI tooltip plugin in your jqueryUI script. 
+#### Tooltips displays with no styles, or even doesn't display at all: 
+* Do not forget to execute: 
+``` $( document ).tooltip(); ```
+ As document load. Also, you need the jQueryUI tooltip plugin in your jqueryUI script. 
 	
-* The datepicker ignore a DateCollection, ForbiddenDaysCollection or EnabledDaysCollection totally:
-···To use string formats like "01/05" instead of "1/5" (1st of May) will cause this. 
-···To use different formats can cause this issue too: pass [ "1/5" , "10/5/2014" ] to a range will cause the second date to be completely ignored.
+#### The datepicker ignore a DateCollection, ForbiddenDaysCollection or EnabledDaysCollection totally:
+* To use string formats like "01/05" instead of "1/5" (as 1st of May) will cause this. 
+* To use different formats can cause this issue too: pass [ "1/5" , "10/5/2014" ] to a range will cause the second date to be completely ignored.
 	
-* So, what if I want to combine that days?
-···To combine two different kind of collections, just create two different collections passing different arrays as params, one with the year format and other with the "d/m" format.  
+#### So, what if I want to combine these days?
+* To combine two different kind of collections, just create two different collections passing different arrays as params, one with the year format and other with the "d/m" format.  
 	
-* I completely disabled the current month dates, and still the datepicker raises in the current month, with all its dates disabled, while I want it to raise in the first next month with an available date. 
+#### I completely disabled the current month dates, and still the datepicker raises in the current month, with all its dates disabled, while I want it to raise in the first next month with an available date. 
 	
-···The native beforeShowDay utility is not intented to manage the month the datepicker displays on creation. You must pass a minDate value to the datepicker in construction: 
+* The native beforeShowDay utility is not intented to manage the month the datepicker displays on creation. You must pass a minDate value to the datepicker in construction: 
 	
 	```javascript
 	//lets imagine that today is first of march of 2014, but all march month is disabled by the DateRestraints.march() method: 
@@ -175,18 +175,18 @@ More Documentation and examples can be find in the code itself. Also, every non-
 	```
 	
 	
-* Can I create a one single day range? 
-···Yes, by passing just only a parameter instead of two. 	
+#### Can I create a one single day range? 
+* Yes, by passing just only a parameter instead of two. 	
 	
 	
-*I want to create an everlasting range: 
-···This is not supported. You can just return an array with [enable/disable , desiredClass , desiredTooltip] as the very last statement of your restraint method,  so every day that doesn't match any other range will display that behaviour.
+####I want to create an everlasting range: 
+* This is not supported. You can just return an array with [enable/disable , desiredClass , desiredTooltip] as the very last statement of your restraint method,  so every day that doesn't match any other range will display that behaviour.
 	
-* My script doesn't recognize your plugin functions.
+#### My script doesn't recognize your plugin functions.
 
-···Obviusly, this could be caused by incorrect routing to the script. 
+* Obviusly, this could be caused by incorrect routing to the script. 
 	
-···Less obvious, maybe you tried to use some utilities before the script is loaded. This could happend if you use to load some of your js scripts at the very end of the <body> tag, while your datepicker creation code is running before. If you didn't wait to the document to load before your datepicker creation call, wrapping your datepicker creation code between $( function() {  //your code here// }); should be the solution, and will make the script to work no matter where in the code it is invoked, since the code wrapped that way will not execute until the document is ready:
+* Less obvious, maybe you tried to use some utilities before the script is loaded. This could happend if you use to load some of your js scripts at the very end of the ```<body>``` tag, while your datepicker creation code is running before. If you didn't wait to the document to load before your datepicker creation call, wrapping your datepicker creation code between ```$( function() {  //your code here// });``` should be the solution, and will make the script to work no matter where in the code it is invoked, since the code wrapped that way will not execute until the document is ready:
 	
 	```javascript
 	$(function (){
@@ -195,9 +195,9 @@ More Documentation and examples can be find in the code itself. Also, every non-
 	} );//end jQuery docuement on load 
 	``` 
 	 
-* Can I change the ranges or collection dates dinamically? 
+#### Can I change the ranges or collection dates dinamically? 
 
-···Since they come with no API to modify its inner values and these values are encapsulated by a closure, you can't (but you can do enable or disable a DateCollection on the fly). By the way, once the dapicker its created, change a range used in its beforeShowDay function would have no effect, even if you could. The best way to change a datepicker dinamically is to destroy it and create a new one. 
+* Since they come with no API to modify its inner values and these values are encapsulated by a closure, you can't (but you can do enable or disable a DateCollection on the fly). By the way, once the dapicker its created, change a range used in its beforeShowDay function would have no effect, even if you could. The best way to change a datepicker dinamically is to destroy it and create a new one. 
 	
 
  
