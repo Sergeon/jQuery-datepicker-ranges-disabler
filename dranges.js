@@ -1,4 +1,3 @@
-
 /**
  * Dependencies: 
  * This script needs jQuery in order to work. JqueryUI with tooltips is heavily recommended. 
@@ -29,7 +28,7 @@ var DateRanges = ( function(){
 		 * setTooltip : set the tooltip assigned to datepicker cells belonging to this range.
 		 * 
 		 */
-		var RangesLogic = ( function( $sd , $ed , $class , $tooltip , $enabled ){
+		var RangesLogic = ( function( $sd , $ed ){
 			
 			/**
 			 * DATA VARS DEFINITION: initialize vars with some value to avoid warnings. 
