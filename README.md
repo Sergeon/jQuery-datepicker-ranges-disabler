@@ -150,11 +150,11 @@ More Documentation and examples can be find in the code itself. Also, every non-
 ##TroubleShooting:
 
 * Tooltips displays with no styles, or even doesn't display at all: 
-···Do not forget to execute: 
+...Do not forget to execute: 
 ```javascript $( document ).tooltip(); ```
  As document load. Also, you need the jueryUI tooltip plugin in your jqueryUI script. 
 	
-*The datepicker ignore a DateCollection, ForbiddenDaysCollection or EnabledDaysCollection totally:
+* The datepicker ignore a DateCollection, ForbiddenDaysCollection or EnabledDaysCollection totally:
 ···To use string formats like "01/05" instead of "1/5" (1st of May) will cause this. 
 ···To use different formats can cause this issue too: pass [ "1/5" , "10/5/2014" ] to a range will cause the second date to be completely ignored.
 	
