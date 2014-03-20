@@ -4,10 +4,6 @@ jQuery-datepicker-ranges-disabler
 An human-firendly set of facilities to manage jQuery datepickers dates restrictions and tooltips
 
 
-
-
-# jqueryUI-datepicker dates disabler facilitator 
-
 [![License](https://poser.pugx.org/leaphly/cart-bundle/license.png)](https://packagist.org/packages/leaphly/cart-bundle)
 
 
