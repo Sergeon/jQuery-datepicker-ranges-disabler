@@ -150,7 +150,6 @@ More Documentation and examples can be find in the code itself. Also, every non-
 ##TroubleShooting:
 
 * Tooltips displays with no styles, or even doesn't display at all: 
-
 ···Do not forget to execute: 
 ```javascript $( document ).tooltip(); ```
  As document load. Also, you need the jueryUI tooltip plugin in your jqueryUI script. 
