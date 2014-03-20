@@ -13,7 +13,7 @@ html classes and tooltips, in a naive way.
 
 ## Author
 
-mauro Caffaratto
+Mauro Caffaratto
 
 ## License
 
