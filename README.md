@@ -95,7 +95,7 @@ if (forbiddenSpecificYearCollection.contains( date ) )
 
 This script define some closures wich provides facilities to work around the datepicker beforeShowDay functions. The top-level API contains:
 
-DateRanges() : autoexecute function wich in turn returns two closures to deal with continuous ranges of dates:
+	--DateRanges() : autoexecute function wich in turn returns two closures to deal with continuous ranges of dates:
 	DateRanges.ForbiddenRange()
 	DateRanges.EnabledRange()
 	
