@@ -17,7 +17,7 @@ Mauro Caffaratto
 
 ## License
 
-licensed under the [MIT][mit] and [GPL][gpl] licenses
+licensed under the MIT and GPL licenses
 
 
 ##Dependencies
