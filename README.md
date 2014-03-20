@@ -108,7 +108,7 @@ This script define some closures wich provides facilities to work around the dat
 	DateRestraints()
 
 
-ForbiddenRange and EnabledRange let to define continuous dates ranges and manually set its classes and tooltips in the datepicker, while 
+ForbiddenRange and EnabledRange lets to define continuous dates ranges and manually set its classes and tooltips in the datepicker, while 
 ForbiddenDaysCollection and EnabledDaysCollection represents non-continuous dates collections, constructed from an array of strings. 
 
 DatesCollection represents a non-continous days collection too, that must be enabled or disabled manually. Its use if discouraged unless you 
@@ -127,16 +127,16 @@ every datepicker date.
 
 toBeforeShowDay : return an array with the datepicker jQueryUI beforeShowDay native data representation, wich is: 
 [0] => a boolean claiming wether to disabled that date or not.
-[1] => a string with the class to add to the datepicker cell for that date
-[2] => a string with the tooltip to add to the datepicker cell for that date 
+[1] => a string with the class to add to the datepicker cell for that date.
+[2] => a string with the tooltip to add to the datepicker cell for that date.
 
-just return toBeforeShowDay() function isolates client to deal with this data type. 
+Just return toBeforeShowDay() function isolates client to deal with this data type. 
 
 setTooltip(), setClass(): set tooltip and class internal vars wich be returned when toBeforeShowDay() is called. 
 
 ##Usage: 
 
-define a function to pass to beforeShowDay. Collections and Ranges of dates are intented to be used inside these functions. 
+Define a function to pass to beforeShowDay. Collections and Ranges of dates are intented to be used inside these functions. 
 pass it to beforeShowDay when creating a datepicker:
 ```javascript
 $("#datepicker").datepicker({ beforeShowDay : DateRestraints.myFunction }); 
@@ -149,7 +149,7 @@ More Documentation and examples can be find in the code itself. Also, every non-
 
 ##TroubleShooting:
 
-*Tooltips displays with no styles, or even doesn't display at all: 
+* Tooltips displays with no styles, or even doesn't display at all: 
 
 ···Do not forget to execute: 
 ```javascript $( document ).tooltip(); ```
@@ -183,7 +183,7 @@ More Documentation and examples can be find in the code itself. Also, every non-
 *I want to create an everlasting range: 
 ···This is not supported. You can just return an array with [enable/disable , desiredClass , desiredTooltip] as the very last statement of your restraint method,  so every day that doesn't match any other range will display that behaviour.
 	
-*My script doesn't recognize your plugin functions.
+* My script doesn't recognize your plugin functions.
 
 ···Obviusly, this could be caused by incorrect routing to the script. 
 	
@@ -196,7 +196,7 @@ More Documentation and examples can be find in the code itself. Also, every non-
 	} );//end jQuery docuement on load 
 	``` 
 	 
-*Can I change the ranges or collection dates dinamically? 
+* Can I change the ranges or collection dates dinamically? 
 
 ···Since they come with no API to modify its inner values and these values are encapsulated by a closure, you can't (but you can do enable or disable a DateCollection on the fly). By the way, once the dapicker its created, change a range used in its beforeShowDay function would have no effect, even if you could. The best way to change a datepicker dinamically is to destroy it and create a new one. 
 	
